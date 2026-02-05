@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orchid Makeover - Beauty Salon in Chattogram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -229,6 +230,17 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
+        .contact-item h3 i,
+        .map-container h3 i {
+            margin-right: 0.5rem;
+            color: #e91e63;
+        }
+
+        .rating i {
+            color: gold;
+            margin-right: 0.2rem;
+        }
+
         footer {
             background-color: #e91e63;
             color: white;
@@ -277,7 +289,7 @@
         <h1>Welcome to Orchid Makeover</h1>
         <p>Your premier beauty destination in Chattogram</p>
         <div class="rating">
-            ⭐ 4.4 (19 reviews)
+            <i class="fas fa-star"></i> 4.4 (19 reviews)
         </div>
         <p>Beauty Salon</p>
     </section>
@@ -323,25 +335,25 @@
     <section id="contact" class="contact">
         <h2>Contact Information</h2>
         <div class="contact-grid">
-            <div class="contact-item">
-                <h3>📍 Address</h3>
-                <p>Jhumairah Raisa<br>
-                15 Mehedibag, 1st Floor<br>
-                Jhumaira Building, Mehedibag Rd<br>
-                Chattogram 4000</p>
-            </div>
-            <div class="contact-item">
-                <h3>📞 Phone</h3>
-                <p>01753-651987</p>
-            </div>
         <div class="contact-item">
-            <h3>🕒 Hours</h3>
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>Jhumairah Raisa<br>
+            15 Mehedibag, 1st Floor<br>
+            Jhumaira Building, Mehedibag Rd<br>
+            Chattogram 4000</p>
+        </div>
+        <div class="contact-item">
+            <h3><i class="fas fa-phone"></i> Phone</h3>
+            <p>01753-651987</p>
+        </div>
+        <div class="contact-item">
+            <h3><i class="fas fa-clock"></i> Hours</h3>
             <p>Every day<br>
             9 AM – 8 PM</p>
         </div>
     </div>
     <div class="map-container">
-        <h3>📍 Find Us</h3>
+        <h3><i class="fas fa-map-marker-alt"></i> Find Us</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24637.64186594241!2d91.79786214120409!3d22.35812772219468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd89bc7f79c91%3A0x1c4caf1884d60a31!2sOrchid%20Makeover!5e1!3m2!1sen!2sbd!4v1770318170245!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
