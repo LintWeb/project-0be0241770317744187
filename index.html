@@ -271,6 +271,23 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Animations */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -294,7 +311,7 @@
         <p>Beauty Salon</p>
     </section>
 
-    <section id="services" class="services">
+    <section id="services" class="services section">
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
@@ -324,7 +341,7 @@
         </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about section">
         <h2>About Us</h2>
         <div class="about-content">
             <p>Orchid Makeover is Chattogram's leading beauty salon, dedicated to providing exceptional beauty services in a relaxing and luxurious environment. Our team of skilled professionals uses the latest techniques and high-quality products to help you look and feel your best.</p>
@@ -332,7 +349,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
         <h2>Contact Information</h2>
         <div class="contact-grid">
         <div class="contact-item">
@@ -361,5 +378,19 @@
     <footer>
         <p>&copy; 2024 Orchid Makeover. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </body>
 </html>
