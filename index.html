@@ -3,9 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-0be0241770317744187</title>
+    <title>Orchid Makeover - Beauty Salon in Chattogram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e91e63;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f9fa"/><text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="20" fill="%23e91e63">🌸</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .rating {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .services {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #e91e63;
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            background-color: #f8f9fa;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #e91e63;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #e91e63;
+            font-size: 2.5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+            }
+
+            .nav-links li {
+                margin-left: 1rem;
+            }
+
+            .services-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+    <header>
+        <nav>
+            <div class="logo">Orchid Makeover</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Orchid Makeover</h1>
+        <p>Your premier beauty destination in Chattogram</p>
+        <div class="rating">
+            ⭐ 4.4 (19 reviews)
+        </div>
+        <p>Beauty Salon</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Hair Styling</h3>
+                <p>Professional haircuts, coloring, and styling services</p>
+            </div>
+            <div class="service-card">
+                <h3>Facial Treatments</h3>
+                <p>Rejuvenating facials and skincare treatments</p>
+            </div>
+            <div class="service-card">
+                <h3>Manicure & Pedicure</h3>
+                <p>Nail care and beautiful nail art designs</p>
+            </div>
+            <div class="service-card">
+                <h3>Makeup Services</h3>
+                <p>Bridal makeup, party makeup, and consultations</p>
+            </div>
+            <div class="service-card">
+                <h3>Body Treatments</h3>
+                <p>Massage, waxing, and body scrubs</p>
+            </div>
+            <div class="service-card">
+                <h3>Eyecare</h3>
+                <p>Eyebrow threading, tinting, and lash extensions</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Orchid Makeover is Chattogram's leading beauty salon, dedicated to providing exceptional beauty services in a relaxing and luxurious environment. Our team of skilled professionals uses the latest techniques and high-quality products to help you look and feel your best.</p>
+            <p>We pride ourselves on our attention to detail, personalized service, and commitment to customer satisfaction. Whether you're preparing for a special occasion or simply want to pamper yourself, Orchid Makeover is your go-to destination for all your beauty needs.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📍 Address</h3>
+                <p>Jhumairah Raisa<br>
+                15 Mehedibag, 1st Floor<br>
+                Jhumaira Building, Mehedibag Rd<br>
+                Chattogram 4000</p>
+            </div>
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>01753-651987</p>
+            </div>
+            <div class="contact-item">
+                <h3>🕒 Hours</h3>
+                <p>Every day<br>
+                9 AM – 8 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Orchid Makeover. All rights reserved.</p>
+    </footer>
 </body>
 </html>
